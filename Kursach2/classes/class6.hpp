@@ -4,6 +4,6 @@
 class class6 : public cl_base
 {
   public:
-  class6(cl_base * headptr, std::string name);
+    class6(cl_base * headptr, std::string name);
 };
 #endif
