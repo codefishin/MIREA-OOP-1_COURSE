@@ -29,3 +29,40 @@ void MyClass::createArray()
 {
   myarray = new int[size];
 }
+void MyClass::printArray()
+{
+  for (int i = 0; i < size; i++)
+  {
+    std::cout << myarray[i];
+    if (i < size - 1) std::cout << " ";
+  }
+  std::cout << "\n";
+}
+void MyClass::method1()
+{
+  for(int i = 0; i < size; i = i+2)
+  {
+    myarray[i] = myarray[i] + myarray[i+1];
+  }
+}
+void MyClass::method2()
+{
+  for(int i = 0; i < size; i = i+2)
+  {
+  myarray[i] = myarray[i] * myarray[i+1];
+  }
+}
+int MyClass::getSum()
+{
+  int temp = 0;
+  for(int i = 0; i < size; i++) temp = temp + myarray[i];
+  return temp;
+}
+int * MyClass::returnpointer()
+{
+  return myarray;
+}
+void MyClass::assignpointer(int * ptr)
+{
+  myarray = ptr;
+}
